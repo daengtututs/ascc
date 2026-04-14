@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script>(function(){if(window.matchMedia('(hover:none)').matches||'ontouchstart'in window){var dw=1280;var sw=window.screen.width;var sc=Math.round((sw/dw)*1000)/1000;document.querySelector('meta[name="viewport"]').setAttribute('content','width='+dw+',initial-scale='+sc+',user-scalable=no');}})()</script>
+  <title>ailua.</title>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/work-contact.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div id="preloader">
+  <div id="pl-inner">
+    <span id="pl-brand">ailua.</span>
+    <span id="pl-tag">creative studio</span>
+  </div>
+</div>
+
+<div id="cursor">&gt;</div>
+<div id="cursor-dot"></div>
+<div id="service-preview"></div>
+<div id="strip-cursor-label"></div>
+
+<div id="header-black" class="ht-layer">
+  <div class="ht-brand">ailua.</div>
+  <div class="ht-tagline">creative studio</div>
+  <div class="ht-nav">
+    <a href="#work">work</a>
+    <a href="#services">services</a>
+    <a href="#contact">contact</a>
+  </div>
+  <div class="ht-right">
+    <div class="ht-social">
+      <a href="https://instagram.com/ailuascr" target="_blank">instagram</a>
+      <a href="https://tiktok.com/@anairdnehzi" target="_blank">tiktok</a>
+    </div>
+    <div class="ht-location">bandung, id</div>
+  </div>
+</div>
+
+<div id="header-white" class="ht-layer">
+  <div class="ht-brand">ailua.</div>
+  <div class="ht-tagline">creative studio</div>
+  <div class="ht-nav">
+    <a href="#work">work</a>
+    <a href="#services">services</a>
+    <a href="#contact">contact</a>
+  </div>
+  <div class="ht-right">
+    <div class="ht-social">
+      <a href="https://instagram.com/ailuascr" target="_blank">instagram</a>
+      <a href="https://tiktok.com/@anairdnehzi" target="_blank">tiktok</a>
+    </div>
+    <div class="ht-location" style="opacity:0;pointer-events:none;">bandung, id</div>
+  </div>
+</div>
+
+<button id="mob-ham" aria-label="Open menu"><span class="ham-chevron">&lt;</span></button>
+
+<div id="mob-menu">
+  <div class="mob-menu-inner">
+    <div class="mob-menu-top">
+      <div class="mob-menu-brand">
+        <span class="mob-brand-name">ailua.</span>
+        <span class="mob-brand-tag">creative studio</span>
+      </div>
+      <button class="mob-close" id="mob-close">\</button>
+    </div>
+    <nav class="mob-nav">
+      <div class="mob-nav-item">
+        <a href="#work" class="mob-nav-link">
+          <span class="mob-nav-text">Work</span>
+        </a>
+      </div>
+      <div class="mob-nav-item">
+        <a href="#services" class="mob-nav-link">
+          <span class="mob-nav-text">Services</span>
+        </a>
+      </div>
+      <div class="mob-nav-item">
+        <a href="#contact" class="mob-nav-link">
+          <span class="mob-nav-text">Contact</span>
+        </a>
+      </div>
+    </nav>
+    <div class="mob-socials">
+      <a href="https://instagram.com/ailuascr" target="_blank" class="mob-social-link">Instagram</a>
+      <a href="https://tiktok.com/@anairdnehzi" target="_blank" class="mob-social-link">TikTok</a>
+    </div>
+    <div class="mob-loc">Bandung, ID</div>
+  </div>
+</div>
+
+<section id="hero">
+  <h1 class="hero-name">ailua.</h1>
+</section>
+
+<section id="services">
+  <div class="services-about reveal">
+    <div class="services-about-label reveal-fade reveal-d1">ailuascreative<span class="corner-mark"></span></div>
+    <div class="services-about-body reveal-up reveal-d2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    <div class="services-about-copy reveal-fade reveal-d3">©2024–26</div>
+  </div>
+
+  <div class="services-trigger">
+    <button class="services-btn" id="servicesBtn">Services <i class="arrow">&#x25BE;</i></button>
+    <div class="services-dropdown" id="servicesDropdown">
+      <button class="dropdown-item" onclick="openSlider('webapp')">Web App</button>
+      <button class="dropdown-item" onclick="openSlider('portfolio')">Portfolio Site</button>
+      <button class="dropdown-item" onclick="openSlider('ui')">UI Development</button>
+    </div>
+  </div>
+
+  <div class="service-rows">
+    <div class="service-row" data-service="webapp" onclick="window.location.href='webapp.html'">
+      <div class="row-hover-line"></div>
+      <span class="service-row-name">Web App</span>
+      <span class="service-row-num">01</span>
+      <p class="service-row-desc">
+        <span class="desc-main">
+          <span class="desc-line">Web application modern — cepat, scalable,</span>
+          <span class="desc-line">dan siap produksi dari nol hingga deploy.</span>
+        </span>
+        <span class="desc-tag">Web &<br>Mobile</span>
+      </p>
+    </div>
+
+    <div class="service-row" data-service="portfolio" onclick="window.location.href='portfolio.html'">
+      <div class="row-hover-line"></div>
+      <span class="service-row-name">Portfolio Site</span>
+      <span class="service-row-num">02</span>
+      <p class="service-row-desc">
+        <span class="desc-main">
+          <span class="desc-line">Website personal yang merepresentasikan</span>
+          <span class="desc-line">identitas dan karya terbaik Anda.</span>
+        </span>
+        <span class="desc-tag">Design &<br>Dev</span>
+      </p>
+    </div>
+
+    <div class="service-row" data-service="ui" onclick="window.location.href='uidev.html'">
+      <div class="row-hover-line"></div>
+      <span class="service-row-name">UI Development</span>
+      <span class="service-row-num">03</span>
+      <p class="service-row-desc">
+        <span class="desc-main">
+          <span class="desc-line">Dari Figma ke kode bersih — komponen</span>
+          <span class="desc-line">konsisten di setiap breakpoint dan platform.</span>
+        </span>
+        <span class="desc-tag">UI &<br>UX</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div id="slider-overlay">
+  <div class="slider-blur" id="sliderBlur"></div>
+  <div class="slider-panel" id="sliderPanel">
+    <div class="slider-left" id="sliderLeft">
+      <div class="slider-left-content" id="sliderLeftContent">
+        <div class="sl-top">
+          <span class="sl-num" id="sliderNum">01.</span>
+          <button class="sl-close" onclick="closeSlider()">&lt;</button>
+        </div>
+        <div class="sl-label" id="sliderLabel" style="display:none"></div>
+        <div class="sl-headline rk-split" id="sliderHeadline">Headline</div>
+        <div class="sl-divider"></div>
+        <div class="sl-body rk-split" id="sliderBody">Lorem ipsum</div>
+        <div class="sl-body-2 rk-split" id="sliderBody2"></div>
+        <button class="sl-cta" id="sliderCta">Contact ↗</button>
+        <div class="sl-list" id="sliderList"></div>
+        <div class="sl-year" id="sliderYear"></div>
+      </div>
+    </div>
+    <div class="slider-right" id="sliderRight">
+      <div class="slider-right-content" id="sliderRightContent"></div>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="work-label reveal-up">Selected work</div>
+  <div class="work-grid">
+    <div class="work-card"><div class="work-card-bg">Image</div><div class="work-card-name rk-split">Project Alpha</div><div class="work-card-type rk-split">Web App</div></div>
+    <div class="work-card"><div class="work-card-bg">Image</div><div class="work-card-name rk-split">Studio Bento</div><div class="work-card-type rk-split">Portfolio</div></div>
+    <div class="work-card"><div class="work-card-bg">Image</div><div class="work-card-name rk-split">Forma UI</div><div class="work-card-type rk-split">UI Dev</div></div>
+    <div class="work-card"><div class="work-card-bg">Image</div><div class="work-card-name rk-split">Pulse Dashboard</div><div class="work-card-type rk-split">Web App</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-header">
+    <h2 class="contact-title reveal-fade reveal-d1">Let's create together</h2>
+    <p class="contact-subtitle reveal-up reveal-d2">Share your vision, we'll bring it to life with motion and design</p>
+  </div>
+
+  <div class="contact-cards-wrapper">
+    <!-- Contact Form Card -->
+    <div class="contact-card contact-card--form reveal">
+      <div class="card-label">Get In Touch</div>
+      <form class="contact-form" id="contactForm" autocomplete="off">
+        <div class="form-group">
+          <input class="form-input" type="text" name="fname" placeholder="First name" required>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="text" name="lname" placeholder="Last name" required>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="email" name="email" placeholder="Email" required>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input class="form-input" type="text" name="project" placeholder="Type of project" required>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-input form-textarea" name="message" placeholder="Tell us about your project..." rows="3"></textarea>
+          <div class="input-line"></div>
+        </div>
+        <button type="submit" class="submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-arrow">↗</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Info Cards Grid -->
+    <div class="info-cards-grid reveal">
+      <div class="info-card">
+        <div class="info-icon">✦</div>
+        <div class="info-label">Location</div>
+        <div class="info-value">Bandung, Indonesia</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✉</div>
+        <div class="info-label">Email</div>
+        <div class="info-value">hello@ailua.studio</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">@</div>
+        <div class="info-label">Social</div>
+        <div class="info-value">@ailuascr</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
